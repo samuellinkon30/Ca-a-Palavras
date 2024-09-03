@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça-Palavras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./index.css"/>
+    
+</head>
+<body>
+    <header>
+      <div class="header">
+        
+        <div class="logo">
+            <h1>Detetive Tubarão</h1>
+        </div>
+        
+        <!-- <nav class="menu">
+            <ul>
+                <li><a href="#" class="menu1">Home</a></li>
+                <li><a href="#" class="menu2">Sobre</a></li>
+                <li><a href="#" class="menu3">Contato</a></li>
+            </ul>
+        </nav> -->
+      </div>
+    </header>
+    <div class="buttonStart">
+      <!-- <button class="button-82-pushable">INICIAR</button> -->
+      <button class="button-82-pushable start" role="button">
+        <span class="button-82-shadow"></span>
+        <span class="button-82-edge"></span>
+        <span class="button-82-front text">
+          JOGAR
+        </span>
+      </button>
+    </div>
+    <div class="container">
+        <div class="row">    
+            
+          <div class="box box-6 grid">
+            <span class="form-titulo">Caça-Palavras Detetive Tubarão</span>
+            <div class="form-group">
+                <div class="row row-space-evenly">
+                    <div class="grid-caca-palavras">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+          <div class="box box-6 imagens">
+            <div class="form-lista-palavras">
+              <div class="form-group">
+                  <ul class="lista-palavras">
+                  </ul>
+              </div>
+            </div>
+              <img class="shark" src="./assets/tubarao.png" alt="Caça-Palavras">  
+              <img class="ballon" src="./assets/png-transparent-black-and-white-car-comics-speech-bubble-conversation-bar-logo-angle-white-text-removebg-preview.png" alt="Logo">
+              <div class="messagemResult">
+                <p>Você sabe o que é um predador? <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed nulla consectetur, luctus eros in, dignissim est. In gravida dui eros.</p>
+              </div>
+            </div>
+        </div>
+        <div class="imagems">
+          <img class="sol" src="./assets/sol.png">
+
+          <img class="gs" src="./assets/gs.png">
+          <img class="gs2" src="./assets/gs.png">
+
+          <img class="planta1" src="./assets/planta.png">
+          <img class="planta2" src="./assets/planta.png">
+          <img class="planta3" src="./assets/planta.png">
+          <img class="planta4" src="./assets/planta.png">
+          <img class="planta5" src="./assets/planta.png">
+
+          <img class="concha1" src="./assets/concha.png">
+          <img class="concha2" src="./assets/concha.png">
+          <img class="concha3" src="./assets/concha.png">
+
+          <img class="estrela1" src="./assets/estrela.png">
+          <img class="estrela2" src="./assets/estrela.png">
+          <img class="estrela3" src="./assets/estrela.png">
+          <img class="estrela4" src="./assets/estrela.png">
+          <img class="estrela5" src="./assets/estrela.png">
+
+          <img class="nuvem1" src="./assets/nuvem1.png">
+          <img class="nuvem1-1" src="./assets/nuvem1.png">
+
+          <img class="nuvem2" src="./assets/nuvem2.png">
+          <img class="nuvem2-1" src="./assets/nuvem2.png">
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
+
+<script>
+  $(document).ready(function(){
+    $(".start").click(function(){
+      $(".box.box-6.imagens").css("transform", "translateX(0)");
+      $(".box.box-6.grid").css("transform", "translateX(0)");
+      $(".box.box-6.grid").css("opacity", "1");
+      $(".box.box-6.imagens").css("opacity", "1");
+      $(this).hide();
+    });
+  });
+</script>
+
+<style>
+.sol{
+  z-index: -1;
+    position: absolute;
+    top: -45px;
+    right: -100px;
+    width: 200px;
+}
+img.gs {
+    position: absolute;
+    bottom: 0;
+    left: -300px;
+    z-index: -1;
+}
+img.planta1 {
+    position: absolute;
+    bottom: -20px;
+    width: 100px;
+    left: -125px;
+}
+img.planta2 {
+    position: absolute;
+    bottom: -60px;
+    width: 100px;
+    left: 125px;
+}
+img.planta3 {
+    position: absolute;
+    bottom: -22px;
+    width: 118px;
+    left: 619px;
+}
+img.planta4 {
+    position: absolute;
+    bottom: -62px;
+    width: 94px;
+    right: 0;
+}
+img.planta5 {
+  position: absolute;
+    bottom: 100px;
+    width: 100px;
+    right: -165px;
+}
+img.concha1 {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 100px;
+    transform: rotate(11deg);
+}
+img.concha2 {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 100px;
+    transform: rotate(11deg);
+}
+img.concha3 {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 100px;
+    transform: rotate(11deg);
+}
+img.concha2 {
+    position: absolute;
+    left: -240px;
+    bottom: 186px;
+    width: 70px;
+    transform: rotate(343deg);
+}
+img.concha3 {
+    position: absolute;
+    left: 800px;
+    bottom: -48px;
+    width: 100px;
+    transform: rotate(11deg);
+}
+img.estrela1 {
+    position: absolute;
+    bottom: -40px;
+    left: 400px;
+    width: 100px;
+}
+img.estrela2 {
+    position: absolute;
+    bottom: 85px;
+    left: -200px;
+    width: 60px;
+}
+img.estrela3 {
+    position: absolute;
+    bottom: 40px;
+    left: 789px;
+    width: 60px;
+    transform: rotate(45deg);
+}
+img.estrela4 {
+  position: absolute;
+    bottom: 200px;
+    right: -54px;
+    width: 100px;
+}
+img.estrela5 {
+  position: absolute;
+    bottom: 10px;
+    right: -200px;
+    width: 60px;
+}
+img.gs2 {
+    position: absolute;
+    bottom: 0;
+    right: -350px;
+    z-index: -1;
+    transform: scale(.5);
+}
+img.nuvem1-1 {
+    position: absolute;
+    top: 40px;
+    left: -231px;
+    width: 250px;
+    z-index: -1;
+}
+img.nuvem1 {
+    position: absolute;
+    top: 0;
+    left: -116px;
+    width: 250px;
+    z-index: -1;
+}
+img.nuvem2 {
+    position: absolute;
+    top: 0;
+    right: 21px;
+    width: 113px;
+}
+img.nuvem2-1 {
+    position: absolute;
+    top: 32px;
+    right: 200px;
+    width: 113px;
+}
+</style>
